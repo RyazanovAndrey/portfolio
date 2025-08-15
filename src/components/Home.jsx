@@ -19,7 +19,7 @@ const Home = () => {
             <div className="max-w-7xl mx-auto px-3">
                 <div className="text-center space-y-5 flex flex-col items-center text-accent mt-50 relative z-50">
                     <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
-                        <img src="/public/face.png" width={140} alt="" />
+                        <img src="face.png" width={140} alt="" />
                     </motion.div>
                     <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }}>
                         <p className='text-xl'>Hello, I`m Ryazanov Andrey</p>

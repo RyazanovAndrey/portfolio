@@ -8,7 +8,7 @@ const About = () => {
                 <div className="flex flex-col md:flex-row items-center justify-center text-center md:text-left gap-10">
                     <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
                         <div className="md:min-w-[400px]">
-                            <img src="/public/about.png" alt=""/>
+                            <img src="about.png" alt=""/>
                         </div>
                     </motion.div>
                     <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }}>
