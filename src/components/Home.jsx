@@ -17,7 +17,7 @@ const Home = () => {
                 <div className="circle-box"></div>
             </div>
             <div className="max-w-7xl mx-auto px-3">
-                <div className="text-center space-y-5 flex flex-col items-center text-accent mt-50 relative z-50">
+                <div className="text-center space-y-5 flex flex-col items-center text-accent mt-50 relative z-40">
                     <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}>
                         <img src="face.png" width={140} alt="" />
                     </motion.div>

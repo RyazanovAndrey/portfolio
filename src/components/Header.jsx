@@ -19,7 +19,7 @@ const Header = () => {
     }, [])
 
     return (
-        <header className={isScroll ? 'fixed w-full py-3 z-90 bg-main duration-500 shadow-2xl/8' : 'fixed w-full py-3 z-90'}>
+        <header className={isScroll ? 'fixed w-full top-0 left-0 py-3 z-90 bg-main duration-500 shadow-2xl/8' : 'fixed w-full py-3 top-0 left-0 z-50'}>
             <div className="max-w-7xl mx-auto px-3 flex justify-between items-center">
                 <a href="#" className='text-3xl text-accent relative'>
                     <p className='size-2 bg-[#E51111] rounded-full absolute -right-2 bottom-3'></p>
@@ -37,17 +37,17 @@ const Header = () => {
                 </div>
                 {isOpenModile ? (
                     <button className={'md:hidden cursor-pointer'} onClick={() => setIsOpenModile(!isOpenModile)}>
-                        <X size={36} />
+                        <X color={themeColor == 'light' ? 'black' : 'white'} size={36} />
                     </button>
                 ) : (
                     <button className={'md:hidden cursor-pointer'} onClick={() => setIsOpenModile(!isOpenModile)}>
-                        <AlignJustify size={36} />
+                        <AlignJustify color={themeColor == 'light' ? 'black' : 'white'} size={36} />
                     </button>
                 )}
                 {isOpenModile && (
-                    <div className='absolute top-[99%] left-0 w-full bg-white shadow-2xl/10'>
+                    <div className={`absolute top-[99%] left-0 w-full shadow-2xl/10 z-50 ${themeColor == 'light' ? 'bg-white' : 'bg-black'}`}>
                         {linksMenu.map(link => (
-                            <a onClick={() => setIsOpenModile(false)} href={link.href} className='block p-4 text-2xl'>{link.title}</a>
+                            <a onClick={() => setIsOpenModile(false)} href={link.href} className={`block p-4 text-2xl ${themeColor == 'light' ? 'text-black' : 'text-white'}`}>{link.title}</a>
                         ))}
                     </div>
                 )}
