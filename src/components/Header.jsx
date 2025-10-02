@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
-import { ThemeContext } from '../Context/ThemeProvider';
+import { ThemeContext } from '../context/ThemeProvider.jsx';
 import { AlignJustify, Moon, Sun, X } from 'lucide-react';
 import { linksMenu } from "../data.js";
 
