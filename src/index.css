@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-main: white;
+  --color-accent: #323131;
+  --color-grey-line: #EEEEEE;
+  --color-gradient-box: radial-gradient(circle,#f6e2fb 0%, #f9fcebcc 100%)
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Main background for body */
+.box {
+  background-color: var(--color-main);
+  min-height: 100vh;
+  font-family: 'Outfit';
+}
+
+.dark {
+  --color-main: black;
+  --color-accent: white;
+  --color-grey-line: #0f0f0f;
+  --color-gradient-box: black;
+}
+
+/* Navigation link on header */
+.link {
+  display: block;
+  position: relative;
+}
+
+
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-accent);
+  border-radius: 50px;
+  opacity: 0;
+  transition: .2s;
+}
+
+.link:hover::after {
+  opacity: 1;
+  width: 100%;
+}
+
+
+/* Circle on main */
+.circle-box {
+  width: 1000px;
+  height: 1000px;
+  border-radius: 50%;
+  background: var(--color-gradient-box);
+  filter: blur(30px);
+}
