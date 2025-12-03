@@ -30,6 +30,7 @@ const Home = () => {
                     <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.8 }}>
                         <div className="flex gap-x-2 justify-center">
                         <a href='tel:+380673095451' className='flex gap-x-2 py-3 items-center px-6 rounded-full cursor-pointer bg-accent text-main hover:bg-main hover:text-accent duration-200'><Mail />connect with me</a>
+                        <a href="https://drive.google.com/file/d/1W3Z5CSMc3h_Ynbu1DnihSp0-i-HcSjUF/view?usp=sharing">my resume</a>
                         <button className=' text-accent flex py-3 px-6 rounded-full cursor-pointer gap-x-2 bg-main/80'><File />my resume</button>
                     </div>
                     </motion.div>
