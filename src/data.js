@@ -6,6 +6,7 @@ const linksMenu = [
 ]
 
 const worksList = [
+    { image: 'print3d.jpg', title: 'ArtPrint3d', stack: ['React JS', 'Tailwind CSS'], link: 'https://ryazanovandrey.github.io/print3d/'},
     { image: 'botnexus.jpg', title: 'Botnexus', stack: ['HTML', 'SCSS', 'JS'], link: 'https://ryazanovandrey.github.io/botnexus/'},
     { image: 'livinglines.jpg', title: 'Livinglines', stack: ['Next JS', 'Tailwind CSS'], link: 'https://ryazanovandrey.github.io/livinglines/'},
     { image: 'studiq.jpg', title: 'Studiq', stack: ['React JS', 'Tailwind CSS'], link: 'https://ryazanovandrey.github.io/studiq/'},
