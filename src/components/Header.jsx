@@ -1,14 +1,15 @@
-import { useContext, useEffect, useState } from 'react';
-import { ThemeContext } from '../context/ThemeProvider.jsx';
+import { useEffect, useState } from 'react';
 import { AlignJustify, Moon, Sun, X } from 'lucide-react';
 import { linksMenu } from "../data.js";
+import { useTheme } from '../context/ThemeProvider.jsx';
 
 const Header = () => {
 
+    const { themeColor, toggleTheme } = useTheme()
+
     const [isScroll, setIsScroll] = useState(false);
-    const { changeTheme, themeColor } = useContext(ThemeContext)
     const [isOpenModile, setIsOpenModile] = useState(false)
-    true
+
     useEffect(() => {
         const activeBar = () => setIsScroll(window.scrollY > 100)
         window.addEventListener('scroll', activeBar)
@@ -30,11 +31,13 @@ const Header = () => {
                         return <a href={link.href} className='text-lg link'>{link.title}</a>
                     })}
                 </div>
+
                 <div className="flex items-center gap-x-2">
-                    <button onClick={changeTheme} className='bg-accent rounded-full text-main p-3 cursor-pointer'>
+                    <button onClick={toggleTheme} className='bg-accent rounded-full text-main p-3 cursor-pointer'>
                         {themeColor === 'light' ? <Moon /> : <Sun />}
                     </button>
                 </div>
+
                 {isOpenModile ? (
                     <button className={'md:hidden cursor-pointer'} onClick={() => setIsOpenModile(!isOpenModile)}>
                         <X color={themeColor == 'light' ? 'black' : 'white'} size={36} />

@@ -7,11 +7,15 @@
   --color-main: white;
   --color-accent: #323131;
   --color-grey-line: #EEEEEE;
-  --color-gradient-box: radial-gradient(circle,#f6e2fb 0%, #f9fcebcc 100%)
+  --color-gradient-box: radial-gradient(circle, #f6e2fb 0%, #f9fcebcc 100%)
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-main);
 }
 
 /* Main background for body */
@@ -38,10 +42,11 @@ html {
 .link::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: -8px;
   left: 0;
   width: 0;
-  height: 2px;
+  border-radius: 50px;
+  height: 3px;
   background-color: var(--color-accent);
   border-radius: 50px;
   opacity: 0;

@@ -6,10 +6,12 @@ const linksMenu = [
 ]
 
 const worksList = [
+    { image: 'chris-bloom.jpg', title: 'Chris-bloom', stack: ['Next JS', 'Tailwind CSS', 'Motion'], link: 'https://ryazanovandrey.github.io/chris-bloom/'},
+    { image: 'plumber.jpg', title: 'Plumber', stack: ['Next JS', 'Tailwind CSS', 'Motion'], link: 'https://ryazanovandrey.github.io/plumber/'},
+    { image: 'popova.jpg', title: 'Daria Popova', stack: ['HTML', 'SCSS', 'JS'], link: 'https://ryazanovandrey.github.io/site-popova/'},
     { image: 'print3d.jpg', title: 'ArtPrint3d', stack: ['React JS', 'Tailwind CSS'], link: 'https://ryazanovandrey.github.io/print3d/'},
     { image: 'botnexus.jpg', title: 'Botnexus', stack: ['HTML', 'SCSS', 'JS'], link: 'https://ryazanovandrey.github.io/botnexus/'},
     { image: 'livinglines.jpg', title: 'Livinglines', stack: ['Next JS', 'Tailwind CSS'], link: 'https://ryazanovandrey.github.io/livinglines/'},
-    { image: 'studiq.jpg', title: 'Studiq', stack: ['React JS', 'Tailwind CSS'], link: 'https://ryazanovandrey.github.io/studiq/'},
     { image: 'bricknest.jpg', title: 'Bricknest', stack: ['React JS', 'Tailwind CSS'], link: 'https://ryazanovandrey.github.io/bricknest/'},
     { image: 'versel.jpg', title: 'Versel Hotel', stack: ['React JS', 'Tailwind CSS'], link: 'https://ryazanovandrey.github.io/hotel/'},
     { image: 'coffelife.jpg', title: 'CoffeLife', stack: ['HTML', 'CSS', 'JS'], link: 'https://ryazanovandrey.github.io/coffelife/'},

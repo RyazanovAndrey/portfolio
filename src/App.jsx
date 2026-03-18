@@ -13,21 +13,21 @@ const App = () => {
       <Header />
       <Home />
       <About />
-        <div className="relative overflow-hidden">
-            <div className="absolute top-0 left-0 z-10 pt-10 opacity-50">
-                <div className="circle-box"></div>
-            </div>
-            <Skills />
-            <Works />
+      <div className="relative overflow-hidden">
+        <div className="absolute top-0 left-0 z-10 pt-10 opacity-50">
+          <div className="circle-box"></div>
         </div>
+        <Skills />
+        <Works />
+      </div>
       <div className="relative overflow-hidden">
         <div className="absolute top-0 right-0 z-10 pt-10 pacity-50">
-                <div className="circle-box"></div>
+          <div className="circle-box"></div>
         </div>
         <Contacts />
         <Footer />
       </div>
-        <ScrollTop />
+      <ScrollTop />
     </>
   );
 }

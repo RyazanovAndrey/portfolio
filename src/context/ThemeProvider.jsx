@@ -1,34 +1,34 @@
-import React, { createContext, useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from "react"
 
-export const ThemeContext = createContext(null)
+const ThemeContext = createContext(null)
 
-const ThemeProvider = ({ children }) => {
+export const ThemeProvider = ({ children }) => {
 
-    const userTheme = () => {
-        const getUserTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
-        const isDarkTheme = getUserTheme ? 'dark' : 'light'
+    const [themeColor, setThemeColor] = useState('light')
 
-        const getTheme = localStorage.getItem('theme') || isDarkTheme
-        const  currentTheme = getTheme === 'dark' ? 'dark' : 'light'
-
-        return currentTheme
+    const updateTheme = (theme) => {
+        setThemeColor(theme)
+        localStorage.setItem('theme', theme)
+        document.body.classList.toggle('dark', theme == 'dark')
     }
 
-    const [themeColor, setThemeColor] = useState(userTheme());
-
-    const changeTheme = () => {
-        setThemeColor(themeColor === 'light' ? 'dark' : 'light')
+    const toggleTheme = () => {
+        updateTheme(themeColor == 'light' ? 'dark' : 'light')
     }
 
     useEffect(() => {
-        localStorage.setItem('theme', themeColor)
-    }, [themeColor])
+        const localTheme = localStorage.getItem('theme')
+        const userTheme = window.matchMedia('(prefers-color-shema: dark)').matches ? 'dark' : 'light'
+        const currentTheme = localTheme || userTheme
+        document.body.classList.toggle('dark', currentTheme == 'dark')
+        setThemeColor(currentTheme)
+    }, []);
 
     return (
-        <ThemeContext.Provider value={{ changeTheme, themeColor }}>
-            <div className={`box ${themeColor}`}>{ children }</div>
+        <ThemeContext.Provider value={{ themeColor, toggleTheme }}>
+            {children}
         </ThemeContext.Provider>
-    );
+    )
 }
 
-export default ThemeProvider;
+export const useTheme = () => useContext(ThemeContext)
